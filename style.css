@@ -1,0 +1,24 @@
+.flex{
+    margin-right: 20%;
+    display: inline-block;
+}
+.name{
+    margin-left: 50px;
+}
+.justify{
+    margin-top: 30px;
+    text-align: justify;
+    max-width: 600px;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 30px;
+      color: #003399;
+      margin-left: 50px;
+}
+.rou{
+    background-color: #003399;
+    color: aliceblue;
+    margin-left: 50px;
+    width: 100px;
+}
