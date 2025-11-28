@@ -1,18 +1,19 @@
-function regist(){
-    const reg={
-        user:user.value,
-        accno:accno.value,
-        password:pass.value
+function regist() {
+    const reg = {
+        user: user.value,
+        accno: accno.value,
+        password: pass.value
+    };
+
+   
+    if (localStorage.getItem(reg.accno)) {
+        alert("Account already exists");
+       
+    } else {
+        localStorage.setItem(reg.accno, JSON.stringify(reg));
+        alert("Registered completely");
+        window.location = "./login.html";
     }
-    if(reg.accno in localStorage){
-        alert("all readt exist")
-        window.location="./login.html"
-    }
-    else{
-        localStorage.setItem(reg.accno,JSON.stringify(reg))
-        alert("registered completely")
-    }
-    
 }
 
 function loginbank(){

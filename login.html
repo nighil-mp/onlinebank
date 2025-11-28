@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./register.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bank Login</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+   
+      background: linear-gradient(#a8edea, #fed6e3);
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .login-card img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    .login-card input.form-control {
+      border-radius: 25px;
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+    }
+
+    .login-card button {
+      border-radius: 25px;
+      font-weight: 700;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-card button:hover {
+      background-color: #5a50d1;
+    }
+  </style>
 </head>
 <body>
-    <h1>WELLCOME</h1>
-    <div class="row">
-<div class="col-4"></div>
+
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="login-card login-container">
+      <img src="https://bank-app-new-lc.netlify.app/images/bank.png" alt="bank" class="img-fluid mb-3">
+      <h3 class="mb-4">My Bank</h3>
+
       
-    
+      <input id="num" type="text" class="form-control mb-3" placeholder="Account Number">
+      <input id="pcode" type="password" class="form-control mb-4" placeholder="Password">
 
-    <div class="col-4">
-        <div class="ban text-center" style="height: 600px;">
-        <img src="https://bank-app-new-lc.netlify.app/images/bank.png" alt="bank">
-        <h3 class="text-center">My Bank</h3>
+      
+      <button class="btn text-white w-100 py-2" onclick="loginbank()" style="background-color: #6E63FF;">
+        LOGIN
+      </button>
+    </div>
+  </div>
 
-            <input id="num" type="text" class="form-control" style="margin-left: 55px; width: 400px;" placeholder="Account Number"><br>
-            <input id="pcode" type="password" class="form-control" style="margin-left: 55px; width: 400px;" placeholder="Password"><br>
-            <button style="margin-right: 30px;" class="ded rounded btn btn-outline-primary" onclick="loginbank()">LOGIN</button>
-            <a href="./index.html"></a>
-            </div>
-        </div>
-        
-        
-    </div>
-    <div class="col-4"></div>
-    </div>
+  <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 </html>
